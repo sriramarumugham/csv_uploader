@@ -6,7 +6,8 @@ router.get('/' , function(req, res){
 
 console.log(req.url);
 
-res.end("HI FROM BACKEND");
+
+return res.render("home");
 
 })
 
