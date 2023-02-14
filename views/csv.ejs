@@ -1,0 +1,40 @@
+<% if(csv){ %>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <% let tempObj1=csv.at(0) %>
+                <th scope="row">#</th>
+
+                <% for(var propName in tempObj1){%>
+
+                    <% if(tempObj1.hasOwnProperty(propName)){ %>
+                        <% var propValue=tempObj1[propName] %>
+                        <th scope="col"><%= propName %></th> 
+                    <%}%>
+
+                <%}%>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <% for(let i=0 ;i<csv.length ; i++){ %>
+     
+                <% let tempObj = csv.at(i) %> 
+                <tr>
+                    <th scope="row"><%= i %></th>
+                    <% for(var propName in tempObj){ %>
+                        <% if(tempObj.hasOwnProperty(propName)){ %>
+                        <% var propValue=tempObj[propName] %>
+
+                        <td style="padding-right: 1em"><%= propValue %></td> 
+                        <% } %>
+                    <% } %>
+               </tr>
+            <% } %> 
+
+        </tbody>
+
+    </table>
+    
+<% } %>

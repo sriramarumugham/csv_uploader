@@ -1,6 +1,21 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">CSV Uploader</h5>
 
-<input placeholder="upload a csv file">
+    <form action="/file-upload" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="csv">CSV file input</label>
+        <input
+        required
+          type="file"
+          name="csv"
+          id="csv"
+          placeholder="upload a csv file"
+          class="form-control-file"
+        />
+      </div>
 
-<button>Submit</button>
-
-<h2>Display</h2>
+      <button class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
