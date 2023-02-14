@@ -1,6 +1,7 @@
+require('dotenv').config();
 const mongoose=require('mongoose');
 
-mongoose.connect('mongodb://localhost/csv_dev');
+mongoose.connect(process.env.mongodBUrl);
 
 const db=mongoose.connection;
 
