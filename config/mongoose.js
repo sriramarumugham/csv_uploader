@@ -1,10 +1,14 @@
-require('dotenv').config();
+// require('dotenv').config();
+
+const dotenv = require('dotenv').config();
 
 const mongoose=require('mongoose');
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect(process.env.mongodburl).then(()=>{
+console.log(process.env.DB_CONNECT);
+
+mongoose.connect(process.env.DB_CONNECT).then(()=>{
     console.log("Atlas DB connected")
 }).catch(err=>{
     console.log("mongod db failed to connect", err );
