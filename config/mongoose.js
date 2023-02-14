@@ -4,7 +4,7 @@ const mongoose=require('mongoose');
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect(process.env.mongodBUrl);
+mongoose.connect(process.env.mongodBUrl ,{useNewUrlParser: true});
 
 const db=mongoose.connection;
 
