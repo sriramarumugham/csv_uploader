@@ -33,7 +33,7 @@ const PORT = process.env.PORT || 8000;
 const db = require("./config/mongoose");
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.resolve(__dirname, "public")));
+app.use(express.static(path.resolve(__dirname, "tmp")));
 
 app.use(expressLayouts);
 
