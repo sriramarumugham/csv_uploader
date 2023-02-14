@@ -4,7 +4,11 @@ const mongoose=require('mongoose');
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect(process.env.mongodBUrl ,{useNewUrlParser: true});
+mongoose.connect(process.env.mongodburl).then(()=>{
+    console.log("Atlas DB connected")
+}).catch(err=>{
+    console.log("mongod db failed to connect", err );
+})
 
 const db=mongoose.connection;
 
