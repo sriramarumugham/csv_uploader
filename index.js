@@ -34,6 +34,8 @@ const db = require("./config/mongoose");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(express.urlencoded({extended: true}));
+
 app.use(express.static(path.resolve(__dirname, "tmp")));
 
 app.use(expressLayouts);
