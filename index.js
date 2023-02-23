@@ -72,7 +72,6 @@ app.post("/file-upload", uploads.single("csv"), function (req, res) {
         console.log(data);
       });
       res.render("csv", { csv: resobj });
-      res.redirect("back");
     });
 });
 
