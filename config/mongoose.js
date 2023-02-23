@@ -1,10 +1,8 @@
-// require('dotenv').config();
-
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 
 const mongoose=require('mongoose');
 
-mongoose.set('strictQuery', false);
+mongoose.set('strictQuery', true);
 
 console.log(process.env.DB_CONNECT);
 

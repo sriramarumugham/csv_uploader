@@ -33,6 +33,7 @@ const PORT = process.env.PORT || 8000;
 const db = require("./config/mongoose");
 
 app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(express.static(path.resolve(__dirname, "tmp")));
 
 app.use(expressLayouts);
@@ -40,6 +41,7 @@ app.use(expressLayouts);
 app.use(express.static("assets"));
 
 app.set("layout extractStyles", true);
+
 app.set("layout extractScripts", true);
 
 app.set("view engine", "ejs");
